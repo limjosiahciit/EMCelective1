@@ -58,3 +58,12 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Elective01/Library/
+Elective01/[Ll]ibrary/
+Elective01/[Tt]emp/
+Elective01/[Oo]bj/
+Elective01/[Bb]builds/
+Elective01/[Ll]ogs/
+Elective01/[Mm]emoryCaptures/
+
+
