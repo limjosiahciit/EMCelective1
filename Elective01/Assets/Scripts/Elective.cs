@@ -5,6 +5,7 @@ using UnityEngine;
 public class Elective : MonoBehaviour
 {
     [SerializeField] private float _loadingScreenDelay = 1f;
+    [SerializeField] private float _startDelay = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class Elective : MonoBehaviour
     IEnumerator LoadSceneDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        Debug.Log("waited for third");
     }
 
     // Update is called once per frame
