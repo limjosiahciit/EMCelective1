@@ -9,7 +9,13 @@ public class Elective : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(LoadSceneDelay(_loadingScreenDelay));
+    }
+
+    IEnumerator LoadSceneDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Debug.Log("waited for seconds");
     }
 
     // Update is called once per frame
