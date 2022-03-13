@@ -15,7 +15,7 @@ public class Elective : MonoBehaviour
     IEnumerator LoadSceneDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("waited for thirds");
+        Debug.Log("waited for third");
     }
 
     // Update is called once per frame
