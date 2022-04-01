@@ -5,7 +5,7 @@ using UnityEngine;
 public class Elective : MonoBehaviour
 {
     [SerializeField] private float _loadingScreenDelay = 1f;
-    [SerializeField] private float _startDelay = 2f;
+    //[SerializeField] private float _startDelay = 2f;
 
     // Start is called before the first frame update
     void Start()
