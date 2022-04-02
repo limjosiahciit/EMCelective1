@@ -4,8 +4,28 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public string weaponName;
-    public float weaponDamage = 20;
+    public float bodyDamage = 100;
+
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+
+    public float bulletForce = 20f;
+
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);   
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,9 +35,10 @@ public class Weapon : MonoBehaviour
             IDamageable damageable = collision.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                damageable.Damage(weaponDamage);
+                damageable.Damage(bodyDamage);
             }
         }
-
     }
+
+
 }

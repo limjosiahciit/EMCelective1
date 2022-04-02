@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject AchievementsPanel, CharacterPick, btn;
-    public GameObject player_1, player_2, player_3, spawnPos;
+    public GameObject player_1, player_2, player_3, spawnPos, playerGO;
     public Text keyPress;
 
     private void Awake(){
@@ -31,13 +31,13 @@ public class GameManager : MonoBehaviour
 
         CharacterPick.GetComponent<IPopUpable>().Close(CharacterPick);
         if(_playernum == 1){
-            Instantiate(player_1, spawnPos.transform.position, Quaternion.identity);
+            playerGO = Instantiate(player_1, spawnPos.transform.position, Quaternion.identity);
         }
         if (_playernum == 2){
-            Instantiate(player_2, spawnPos.transform.position, Quaternion.identity);
+            playerGO = Instantiate(player_2, spawnPos.transform.position, Quaternion.identity);
         }
         if (_playernum == 3){
-            Instantiate(player_3, spawnPos.transform.position, Quaternion.identity);
+            playerGO = Instantiate(player_3, spawnPos.transform.position, Quaternion.identity);
         }
     }
 

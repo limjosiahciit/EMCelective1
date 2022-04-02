@@ -35,10 +35,13 @@ public class Player : Character, IDamageable
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);    
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
 }

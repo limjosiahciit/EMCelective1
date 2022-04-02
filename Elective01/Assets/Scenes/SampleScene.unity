@@ -394,6 +394,7 @@ PrefabInstance:
     - {fileID: 9035354131947867380, guid: a4db8bf2ca6a34d49a51297044b73182, type: 3}
     - {fileID: 9035354131947867381, guid: a4db8bf2ca6a34d49a51297044b73182, type: 3}
     - {fileID: 9035354131947867382, guid: a4db8bf2ca6a34d49a51297044b73182, type: 3}
+    - {fileID: 8657328287834656326, guid: a4db8bf2ca6a34d49a51297044b73182, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a4db8bf2ca6a34d49a51297044b73182, type: 3}
 --- !u!1 &73208328
 GameObject:
@@ -583,9 +584,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  time: 2
+  time: 1
   enemy: {fileID: 4676267627606528874, guid: 058dd9406a83b5a459cf10c2ea22d6aa, type: 3}
   PlayerPos: {fileID: 819559867}
+  playerGO: {fileID: 1591948755}
+  temp: {fileID: 0}
 --- !u!4 &175637882
 Transform:
   m_ObjectHideFlags: 0
@@ -1016,7 +1019,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1846388274}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823714138
 GameObject:
@@ -1870,6 +1873,7 @@ PrefabInstance:
     - {fileID: 2102296073097779901, guid: a82fa48541db7fd449595cb888533276, type: 3}
     - {fileID: 4672574257426111392, guid: a82fa48541db7fd449595cb888533276, type: 3}
     - {fileID: 5795900616626332962, guid: a82fa48541db7fd449595cb888533276, type: 3}
+    - {fileID: 5329568754215479562, guid: a82fa48541db7fd449595cb888533276, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a82fa48541db7fd449595cb888533276, type: 3}
 --- !u!1 &1591948755
 GameObject:
@@ -1896,11 +1900,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591948755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23537286, y: -1.5177393, z: -9.79899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1846388274}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1591948757
 MonoBehaviour:
@@ -1921,6 +1925,7 @@ MonoBehaviour:
   player_2: {fileID: 9091416687662763683, guid: a82fa48541db7fd449595cb888533276, type: 3}
   player_3: {fileID: 3458089813229418385, guid: dc72f6725e3f88c499096c236598055b, type: 3}
   spawnPos: {fileID: 819559867}
+  playerGO: {fileID: 1405798706}
   keyPress: {fileID: 165283825}
 --- !u!1 &1694769479
 GameObject:
@@ -2134,6 +2139,7 @@ PrefabInstance:
     - {fileID: 2895091364609682664, guid: dc72f6725e3f88c499096c236598055b, type: 3}
     - {fileID: 8856455897735191865, guid: dc72f6725e3f88c499096c236598055b, type: 3}
     - {fileID: 6588953760530289153, guid: dc72f6725e3f88c499096c236598055b, type: 3}
+    - {fileID: 5482406001968508603, guid: dc72f6725e3f88c499096c236598055b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc72f6725e3f88c499096c236598055b, type: 3}
 --- !u!1 &1748821957
 GameObject:
@@ -2333,7 +2339,6 @@ Transform:
   m_Children:
   - {fileID: 175637882}
   - {fileID: 988143324}
-  - {fileID: 1591948756}
   - {fileID: 819559868}
   m_Father: {fileID: 0}
   m_RootOrder: 3
